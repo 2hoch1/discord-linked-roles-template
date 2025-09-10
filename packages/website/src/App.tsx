@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Erros from "./responses/Errors";
-import viteLogo from "/vite.svg";
+import Success from "./responses/Success";
 import "./App.css";
 import axios from "axios";
 
@@ -40,7 +40,7 @@ function App() {
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err.request || err);
+        console.log(err.request, err);
         setRaw(err.request || err);
         setError(err.message);
         setLoading(false);
@@ -64,17 +64,9 @@ function App() {
   }
 
   if (ok) {
-    return (
-      <>
-        <div>
-          <a href="https://vite.dev" target="_blank" rel="noopener noreferrer">
-            <img src={viteLogo} className="logo vite" alt="Vite logo" />
-          </a>
-        </div>
-        <h1>{code(raw)}</h1>
-        <p className="status">{JSON.stringify(data, null, 2)}</p>
-      </>
-    );
+    if (isRaw(raw) && raw !== null && code(raw) !== null) {
+      return Success(raw);
+    }
   }
 }
 
