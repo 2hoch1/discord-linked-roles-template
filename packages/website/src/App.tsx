@@ -69,7 +69,7 @@ function App() {
             <img src={viteLogo} className="logo vite" alt="Vite logo" />
           </a>
         </div>
-        <h1>{code}</h1>
+        <h1>{code(raw)}</h1>
         <p className="status-code">{JSON.stringify(data, null, 2)}</p>
       </>
     );
