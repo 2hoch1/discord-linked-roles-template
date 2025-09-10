@@ -47,6 +47,7 @@
 
   --color-text: var(--color-neutral-800);
   --color-text-muted: var(--color-neutral-500);
+  --color-text-secondary: var(--color-neutral-600);
 
   --color-border: var(--color-neutral-300);
 
@@ -67,6 +68,7 @@
 
     --color-text: var(--color-neutral-800);
     --color-text-muted: var(--color-neutral-500);
+    --color-text-secondary: var(--color-neutral-600);
 
     --color-border: var(--color-neutral-300);
 
@@ -87,6 +89,7 @@
 
   --color-text: var(--color-white);
   --color-text-muted: var(--color-neutral-400);
+  --color-text-secondary: var(--color-neutral-200);
 
   --color-border: var(--color-neutral-600);
 
@@ -107,6 +110,7 @@
 
     --color-text: var(--color-white);
     --color-text-muted: var(--color-neutral-400);
+    --color-text-secondary: var(--color-neutral-200);
 
     --color-border: var(--color-neutral-600);
 

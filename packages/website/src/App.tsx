@@ -9,7 +9,7 @@ function App() {
   const [raw, setRaw] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [ok, setOk] = useState(null);
+  const [ok, setOk] = useState(false);
 
   type HasStatus = { status?: number };
 
@@ -26,6 +26,8 @@ function App() {
       (raw !== null && typeof raw === "object" && !Array.isArray(raw)) || null
     );
   };
+
+
 
   useEffect(() => {
     axios
@@ -49,7 +51,7 @@ function App() {
     return (
       <>
         <div>
-          <p>Loading...</p>
+          <p className="status">Loading...</p>
         </div>
       </>
     );
@@ -70,7 +72,7 @@ function App() {
           </a>
         </div>
         <h1>{code(raw)}</h1>
-        <p className="status-code">{JSON.stringify(data, null, 2)}</p>
+        <p className="status">{JSON.stringify(data, null, 2)}</p>
       </>
     );
   }
