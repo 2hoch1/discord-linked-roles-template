@@ -1,0 +1,128 @@
+@import url("colorset.css");
+
+
+/* Light, Dark & Color Theme */
+
+
+:root {
+  /* Default Primary */
+  --color-primary: var(--color-blue);
+
+  /* Neutral Palette */
+  --color-white: var(--color-alternativ-white);
+  --color-neutral-100: var(--color-alternativ-neutral-100);
+  --color-neutral-200: var(--color-alternativ-neutral-200);
+  --color-neutral-300: var(--color-alternativ-neutral-300);
+  --color-neutral-400: var(--color-alternativ-neutral-400);
+  --color-neutral-500: var(--color-alternativ-neutral-500);
+  --color-neutral-600: var(--color-alternativ-neutral-600);
+  --color-neutral-700: var(--color-alternativ-neutral-700);
+  --color-neutral-800: var(--color-alternativ-neutral-800);
+  --color-neutral-900: var(--color-alternativ-neutral-900);
+  --color-black: var(--color-alternativ-black);
+}
+
+/* Theme Variants (switchable via [data-theme])*/
+
+[data-theme$="-yellow"] {
+  --color-primary: var(--color-yellow);
+}
+[data-theme$="-orange"] {
+  --color-primary: var(--color-orange);
+}
+[data-theme$="-pink"] {
+  --color-primary: var(--color-pink);
+}
+[data-theme$="-purple"] {
+  --color-primary: var(--color-purple);
+}
+[data-theme$="-blue"] {
+  --color-primary: var(--color-blue);
+}
+
+/* Light Theme */
+[data-theme*="light"] {
+  --color-bg: var(--color-neutral-100);
+  --color-bg-secondary: var(--color-neutral-200);
+
+  --color-text: var(--color-neutral-800);
+  --color-text-muted: var(--color-neutral-500);
+
+  --color-border: var(--color-neutral-300);
+
+  --color-link: var(--color-primary);
+
+  --color-button-bg: var(--color-primary);
+  --color-button-text: var(--color-white);
+
+  --color-notification-bg: var(--color-primary);
+  --color-notification-text: var(--color-white);
+}
+
+/* System - Light Theme */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --color-bg: var(--color-neutral-100);
+    --color-bg-secondary: var(--color-neutral-200);
+
+    --color-text: var(--color-neutral-800);
+    --color-text-muted: var(--color-neutral-500);
+
+    --color-border: var(--color-neutral-300);
+
+    --color-link: var(--color-primary);
+
+    --color-button-bg: var(--color-primary);
+    --color-button-text: var(--color-white);
+
+    --color-notification-bg: var(--color-primary);
+    --color-notification-text: var(--color-white);
+  }
+}
+
+/* Dark Theme */
+[data-theme*="dark"] {
+  --color-bg: var(--color-neutral-800);
+  --color-bg-secondary: var(--color-neutral-700);
+
+  --color-text: var(--color-white);
+  --color-text-muted: var(--color-neutral-400);
+
+  --color-border: var(--color-neutral-600);
+
+  --color-link: var(--color-primary);
+
+  --color-button-bg: var(--color-primary);
+  --color-button-text: var(--color-white);
+
+  --color-notification-bg: var(--color-primary);
+  --color-notification-text: var(--color-white);
+}
+
+/* System - Dark Theme */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-bg: var(--color-neutral-800);
+    --color-bg-secondary: var(--color-neutral-700);
+
+    --color-text: var(--color-white);
+    --color-text-muted: var(--color-neutral-400);
+
+    --color-border: var(--color-neutral-600);
+
+    --color-link: var(--color-primary);
+
+    --color-button-bg: var(--color-primary);
+    --color-button-text: var(--color-white);
+
+    --color-notification-bg: var(--color-primary);
+    --color-notification-text: var(--color-white);
+  }
+}
+
+
+/* Size, Font & Base Theme */
+
+:root {
+    
+}

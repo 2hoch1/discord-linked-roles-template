@@ -6,6 +6,7 @@
     "discord",
     "linkedroles"
   ],
+  "version": "0.0.2",
   "homepage": "https://github.com/2hoch1/discord-linked-roles-template#readme",
   "bugs": {
     "url": "https://github.com/2hoch1/discord-linked-roles-template/issues"
@@ -22,6 +23,13 @@
     "packages/website"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "local": "concurrently -n api,web -c green,blue \"npm --prefix packages/api run dev\" \"npm --prefix packages/website run dev\"",
+    "test": "node scripts/logo.js && npm run local"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "figlet": "^1.9.1",
+    "i": "^0.3.7",
+    "npm": "^11.6.0"
   }
 }
